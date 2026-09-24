@@ -1,0 +1,133 @@
+/* Universal Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: medium;
+    font-family: serif;
+   
+}
+
+/* Header styles */
+header{
+    padding: 30px 20px; /* top and bottom. left and right */
+    margin: 20px;
+    box-shadow: 3px 2px rgb(5,18,17, 10);
+    border-radius: 20px;
+    background-color: rgb(81, 123, 162);
+    text-align: center;
+
+
+
+}
+
+header > h1{ /* combinator selector */
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: serif;
+
+}
+
+header > small{ /* combinator selector */
+    font-size: large;
+    font-weight: bolder;
+    font-family: serif;
+    
+
+}
+
+/* Form Styles */
+#formContainer{
+    padding: 20px 20px; /* top and bottom. left and right */
+    margin: 20px;
+    box-shadow: 3px 2px rgb(5,18,17, 10);
+    border-radius: 20px;
+    background-color: rgb(181, 181, 182);
+    
+
+}
+
+/* */
+#formContainer > #studentform >.input-fields > label{
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 5px;
+    font-family: serif;
+
+
+}
+
+
+#formContainer > #studentform >.input-fields > input {
+    border: 2px solid rgb(81, 123, 162);
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-family: serif;
+
+}
+
+#formContainer > #studentform >.input-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+#formContainer > #studentform :last-child > button {
+    margin-top: 10px;
+    padding: 10px 10px;
+    border: 2px solid rgb(81, 123, 162);
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+article {
+    background-color: rgb(181, 181, 182);
+}
+
+.list-item {
+    margin: 20px;
+    padding: 20px 20px; /* top and bottom. left and right */
+     box-shadow: 3px 2px rgb(5,18,17, 10);
+    border-radius: 20px;
+    background-color: rgb(181, 181, 182);
+    font-family: serif;
+}
+
+.list-item > button{
+    font-family: serif;
+    border: 2px solid rgb(81, 123, 162);
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+#studentList{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px; 
+}
+
+/*responsive design */
+/* mobile */
+@media (width <=320px){
+   #studentList > .list-item{
+    grid-column: span 12;
+   }
+}
+
+/* Tablet */
+@media (width >320px) and (width <=600px){
+   #studentList > .list-item{
+    grid-column: span 4;
+   }
+}
+
+/* Desktop */
+@media (width >= 1000px){
+   #studentList > .list-item{
+    grid-column: span 2;
+   }
+}
