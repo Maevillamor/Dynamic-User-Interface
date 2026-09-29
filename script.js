@@ -14,8 +14,6 @@ const createListItem = (student) =>{
     const p = document.createElement('p');
     const button = document.createElement('button');
 
-
-
 //add value
 h2.innerText = student.name;
 p.innerText = student.program;
@@ -25,7 +23,6 @@ button.addEventListener('click',() =>{
     students = newStudents;
     displayList();
 });
-
 
 
 //add class
@@ -40,8 +37,6 @@ return article;
 }
 
 const list = document.querySelector('#studentList');
-
-
 
 
 const displayList = () =>{
