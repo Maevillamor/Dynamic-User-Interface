@@ -1,4 +1,3 @@
-/* Universal Styles */
 
 *{
     margin: 0;
@@ -13,25 +12,20 @@
 header{
     padding: 30px 20px; /* top and bottom. left and right */
     margin: 20px;
-    box-shadow: 3px 2px rgb(5,18,17, 10);
     border-radius: 20px;
     background-color: rgb(81, 123, 162);
     text-align: center;
-
-
-
 }
 
-header > h1{ /* combinator selector */
+header > h1{ 
     font-size: xx-large;
     font-weight: bolder;
     font-family: serif;
 
 }
 
-header > small{ /* combinator selector */
+header > small{ 
     font-size: large;
-    font-weight: bolder;
     font-family: serif;
     
 
@@ -39,7 +33,7 @@ header > small{ /* combinator selector */
 
 /* Form Styles */
 #formContainer{
-    padding: 20px 20px; /* top and bottom. left and right */
+    padding: 20px 20px; 
     margin: 20px;
     box-shadow: 3px 2px rgb(5,18,17, 10);
     border-radius: 20px;
@@ -49,17 +43,16 @@ header > small{ /* combinator selector */
 }
 
 /* */
-#formContainer > #studentform >.input-fields > label{
+#formContainer > #studentForm >.input-fields > label{
     font-weight: bold;
     font-size: x-large;
     margin-bottom: 5px;
     font-family: serif;
-
+    
 
 }
 
-
-#formContainer > #studentform >.input-fields > input {
+#formContainer > #studentForm >.input-fields > input {
     border: 2px solid rgb(81, 123, 162);
     border-radius: 10px;
     padding: 10px 10px;
@@ -67,13 +60,14 @@ header > small{ /* combinator selector */
 
 }
 
-#formContainer > #studentform >.input-fields {
+#formContainer > #studentForm >.input-fields {
     display: flex;
     flex-direction: column;
 }
 
-#formContainer > #studentform :last-child > button {
+#formContainer > #studentForm :last-child > button {
     margin-top: 10px;
+    width: 100%;
     padding: 10px 10px;
     border: 2px solid rgb(81, 123, 162);
     border-radius: 10px;
@@ -82,17 +76,33 @@ header > small{ /* combinator selector */
     
 }
 
+#formContainer > #studentForm :last-child > button:hover {
+    background-color: rgb(81, 123, 162);
+    color: white;
+}
+
 article {
     background-color: rgb(181, 181, 182);
 }
 
 .list-item {
     margin: 20px;
-    padding: 20px 20px; /* top and bottom. left and right */
-     box-shadow: 3px 2px rgb(5,18,17, 10);
+    padding: 20px 20px; 
     border-radius: 20px;
     background-color: rgb(181, 181, 182);
     font-family: serif;
+    
+    /* Layout alignment inside the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.list-item > h2 {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .list-item > button{
@@ -103,6 +113,12 @@ article {
     cursor: pointer;
 
 }
+
+.list-item > button:hover {
+    background-color: rgb(81, 123, 162);
+    color: white; 
+}
+
 
 #studentList{
     display: grid;
